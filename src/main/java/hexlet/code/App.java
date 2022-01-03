@@ -24,6 +24,7 @@ public class App {
         }
     }
     protected static void menu() {
+        System.out.println("/Hello, Tirion!/");
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
