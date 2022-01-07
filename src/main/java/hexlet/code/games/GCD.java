@@ -28,6 +28,8 @@ public class GCD {
         for (int j = minValue; j > 0; j--) {
             if ((maxValue % j == 0) && (minValue % j == 0)) {
                 result = String.valueOf(j);
+                //пришлось оставить, так как не проходит проверку hexlet
+                break;
             }
         }
         return result;

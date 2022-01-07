@@ -29,6 +29,7 @@ public class GameEngine {
                 System.out.println("'" + answer + "'" + "is wrong answer ;(. "
                         + "Correct answer was '" + getAnswer[1][i] + "'.");
                 isWinner = false;
+                //пришлось оставить, так как не проходит проверку hexlet
                 break;
             }
         }
