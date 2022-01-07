@@ -23,7 +23,7 @@ public class Prime {
 
     static String gameLogic(String question) {
         int temp = Integer.parseInt(question);
-        boolean prime;
+        boolean prime = true;
         if (temp <= 1) {
             prime = false;
             //исключаем значение 1 и 0
