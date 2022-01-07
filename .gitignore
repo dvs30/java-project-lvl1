@@ -9,3 +9,6 @@ build
 
 # Ignore out directory
 out
+
+#Ignore .gitignore
+.gitignore
