@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        System.out.println("/Hello, Tirion!/");
         menu();
         String inputChoiceNumber = new Scanner(System.in).nextLine();
         switch (inputChoiceNumber) {
@@ -25,7 +26,6 @@ public class App {
     }
 
     protected static void menu() {
-        System.out.println("Hello!");
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
