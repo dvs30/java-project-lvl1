@@ -7,9 +7,9 @@ public class Progression {
     static final int MINVALUELENGTH = 5;
     static final String QUESTION = "What number is missing in the progression?";
     public static void start() {
-        GameEngine.start(QUESTION, getProgression());
+        GameEngine.start(QUESTION, gameLogic());
     }
-    static String[][] getProgression() {
+    static String[][] gameLogic() {
         String[][] getProgression = new String[2][GameEngine.CHANCE];
         for (int i = 0; i < getProgression[0].length; i++) {
             //определеяем общую длину прогрессии

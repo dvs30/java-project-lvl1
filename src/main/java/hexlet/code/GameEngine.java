@@ -14,21 +14,20 @@ public class GameEngine {
         startGame(namePerson, getAnswer);
     }
 
-    static void startGame(String namePerson, String[][] getAnswerEven) {
+    static void startGame(String namePerson, String[][] getAnswer) {
 
         boolean isWinner = true;
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < CHANCE; i++) {
-            System.out.println("Question: " + getAnswerEven[0][i]);
+            System.out.println("Question: " + getAnswer[0][i]);
             System.out.println("Your answer: ");
             String answer = sc.nextLine();
-            if (answer.equals(getAnswerEven[1][i])) {
+            if (answer.equals(getAnswer[1][i])) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "'" + "is wrong answer ;(. "
-                        + "Correct answer was '" + getAnswerEven[1][i] + "'.");
+                        + "Correct answer was '" + getAnswer[1][i] + "'.");
                 isWinner = false;
-                break;
             }
         }
         if (isWinner) {

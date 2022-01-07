@@ -16,27 +16,24 @@ public class Calc {
             int firstNumber = Utils.getRandomValue();
             int secondNumber = Utils.getRandomValue();
             getCalc[0][i] = firstNumber + " " + OPERATIONS[randomOperations] + " " + secondNumber;
-            getCalc[1][i] = answer(getCalc[0][i]);
+            getCalc[1][i] = gameLogic(OPERATIONS[randomOperations], firstNumber, secondNumber);
         }
         return getCalc;
     }
-    static String answer(String question) {
-        String answer = "";
-        String operator = question.split(" ")[1];
-        int firstNumber = Integer.parseInt(question.split(" ")[0]);
-        int secondNumber = Integer.parseInt(question.split(" ")[2]);
+    static String gameLogic(String operator, int firstNumber, int secondNumber) {
+        int result;
         switch (operator) {
             case "+" -> {
-                answer = Integer.toString(firstNumber + secondNumber);
+                result = firstNumber + secondNumber;
             }
             case "-" -> {
-                answer = Integer.toString(firstNumber - secondNumber);
+                result = firstNumber - secondNumber;
             }
             case "*" -> {
-                answer = Integer.toString(firstNumber * secondNumber);
+                result = firstNumber * secondNumber;
             }
             default -> throw new RuntimeException("Unavailable operator");
         }
-        return answer;
+        return String.valueOf(result);
     }
 }

@@ -14,22 +14,19 @@ public class GCD {
             int firstNumber = Utils.getRandomValue() + 1;
             int secondNumber = Utils.getRandomValue() + 1;
             getGCD[0][i] = firstNumber + " " + secondNumber;
-            getGCD[1][i] = answer(getGCD[0][i]);
+            getGCD[1][i] = gameLogic(firstNumber, secondNumber);
         }
         return getGCD;
     }
-    static String answer(String question) {
-        String answer = "";
-        int firstNumber = Integer.parseInt(question.split(" ")[0]);
-        int secondNumber = Integer.parseInt(question.split(" ")[1]);
-        int minValue = Math.min(firstNumber, secondNumber);
-        int maxValue = Math.max(firstNumber, secondNumber);
+    static String gameLogic(int firstValue, int secondValue) {
+        String result = "";
+        int minValue = Math.min(firstValue, secondValue);
+        int maxValue = Math.max(firstValue, secondValue);
         for (int j = minValue; j > 0; j--) {
             if ((maxValue % j == 0) && (minValue % j == 0)) {
-                answer = Integer.toString(j);
-                break;
+                result = String.valueOf(j);
             }
         }
-        return answer;
+        return result;
     }
 }

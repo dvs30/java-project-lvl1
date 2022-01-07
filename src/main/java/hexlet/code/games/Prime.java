@@ -14,13 +14,13 @@ public class Prime {
         for (int i = 0; i < getPrime[0].length; i++) {
             int tempValue = Utils.getRandomValue();
             getPrime[0][i] = Integer.toString(tempValue);
-            getPrime[1][i] = logic(getPrime[0][i]);
+            getPrime[1][i] = gameLogic(getPrime[0][i]);
         }
         return getPrime;
     }
-    static String logic(String question) {
+    static String gameLogic(String question) {
         int temp = Integer.parseInt(question);
-        boolean prime = true;
+        boolean prime;
         if (temp <= 1) {
             prime = false;
             //исключаем значение 1 и 0

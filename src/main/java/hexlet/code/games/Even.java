@@ -6,10 +6,10 @@ import hexlet.code.Utils;
 public class Even {
     static final String QUESTION = "Answer 'yes' if number even otherwise answer 'no'.";
     public static void start() {
-        GameEngine.start(QUESTION, getAnswerEven());
+        GameEngine.start(QUESTION, gameLogic());
     }
 
-    static String[][] getAnswerEven() {
+    static String[][] gameLogic() {
         String[][] getEven = new String[2][GameEngine.CHANCE];
         for (int i = 0; i < getEven[0].length; i++) {
             int temp = Utils.getRandomValue();
