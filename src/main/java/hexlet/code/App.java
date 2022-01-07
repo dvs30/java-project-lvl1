@@ -23,6 +23,7 @@ public class App {
             default -> System.out.println("");
         }
     }
+
     protected static void menu() {
         System.out.println("/Hello, Tirion!/");
         System.out.println("Please enter the game number and press Enter.");

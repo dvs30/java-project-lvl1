@@ -5,9 +5,11 @@ import hexlet.code.Utils;
 
 public class GCD {
     static final String QUESTION = "Find the greatest common divisor of given numbers.";
+
     public static void start() {
         GameEngine.start(QUESTION, getGCD());
     }
+
     static String[][] getGCD() {
         String[][] getGCD = new String[2][GameEngine.CHANCE];
         for (int i = 0; i < getGCD[0].length; i++) {
@@ -18,6 +20,7 @@ public class GCD {
         }
         return getGCD;
     }
+
     static String gameLogic(int firstValue, int secondValue) {
         String result = "";
         int minValue = Math.min(firstValue, secondValue);

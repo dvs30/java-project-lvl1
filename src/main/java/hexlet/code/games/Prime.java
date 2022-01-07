@@ -6,9 +6,11 @@ import hexlet.code.Utils;
 public class Prime {
     static final int DIVISION = 3;
     static final String QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+
     public static void start() {
         GameEngine.start(QUESTION, getPrime());
     }
+
     static String[][] getPrime() {
         String[][] getPrime = new String[2][GameEngine.CHANCE];
         for (int i = 0; i < getPrime[0].length; i++) {
@@ -18,6 +20,7 @@ public class Prime {
         }
         return getPrime;
     }
+
     static String gameLogic(String question) {
         int temp = Integer.parseInt(question);
         boolean prime;

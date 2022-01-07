@@ -5,6 +5,7 @@ import hexlet.code.Utils;
 
 public class Even {
     static final String QUESTION = "Answer 'yes' if number even otherwise answer 'no'.";
+
     public static void start() {
         GameEngine.start(QUESTION, gameLogic());
     }

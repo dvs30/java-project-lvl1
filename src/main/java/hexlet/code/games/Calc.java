@@ -6,9 +6,11 @@ import hexlet.code.Utils;
 public class Calc {
     static final String[] OPERATIONS = {"+", "-", "*"};
     static final String QUESTION = "What is the result if the expression?";
+
     public static void start() {
         GameEngine.start(QUESTION, getCalc());
     }
+
     static String[][] getCalc() {
         String[][] getCalc = new String[2][GameEngine.CHANCE];
         for (int i = 0; i < getCalc[0].length; i++) {
@@ -20,6 +22,7 @@ public class Calc {
         }
         return getCalc;
     }
+
     static String gameLogic(String operator, int firstNumber, int secondNumber) {
         int result;
         switch (operator) {
